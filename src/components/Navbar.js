@@ -1,38 +1,43 @@
 import React from 'react'
 import styled from 'styled-components'
+import Header from './Header'
 import logo from '../assets/logo.svg'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { Link } from 'react-router-dom'
 import { links } from '../utils/constants'
 import CartButtons from './CartButtons'
+// contexts Hooks
 import { useProductsContext } from '../context/products_context'
 import { useUserContext } from '../context/user_context'
 
 const Navbar = () => {
   return (
-    <Wrapper>
-      <div className="nav-center">
-        <div className="nav-header">
-          <Link to="/">
-            <img src={logo} alt="logo" className="logo" />
-          </Link>
-          <button type="button" className="nav-toggle">
-            <GiHamburgerMenu />
-          </button>
+    <>
+      <Header />
+      <Wrapper>
+        <div className="nav-center">
+          <div className="nav-header">
+            <Link to="/">
+              <img src={logo} alt="logo" className="logo" />
+            </Link>
+            <button type="button" className="nav-toggle">
+              <GiHamburgerMenu />
+            </button>
+          </div>
+          <ul className="nav-links">
+            {links.map((link) => {
+              const { id, url, text } = link
+              return (
+                <li key={id}>
+                  <a href={url}>{text}</a>
+                </li>
+              )
+            })}
+          </ul>
+          <CartButtons />
         </div>
-        <ul className="nav-links">
-          {links.map((link) => {
-            const { id, url, text } = link
-            return (
-              <li key={id}>
-                <a href={url}>{text}</a>
-              </li>
-            )
-          })}
-        </ul>
-        <CartButtons />
-      </div>
-    </Wrapper>
+      </Wrapper>
+    </>
   )
 }
 
@@ -66,6 +71,9 @@ const Wrapper = styled.nav`
   .nav-links {
     display: none;
   }
+  .cart-btn-wrapper {
+    display: none;
+  }
 
   @media (min-width: 992px) {
     .nav-toggle {
@@ -93,6 +101,10 @@ const Wrapper = styled.nav`
           border-bottom: 2px solid var(--main-clr);
         }
       }
+    }
+
+    .cart-btn-wrapper {
+      display: grid;
     }
   }
 `

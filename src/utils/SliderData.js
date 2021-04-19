@@ -1,5 +1,5 @@
 import ImageOne from '../assets/backgrounds/bcg-9.jpg'
-import ImageTwo from '../assets/backgrounds/bcg-2.jpg'
+import ImageTwo from '../assets/backgrounds/bcg-4.jpg'
 import ImageThree from '../assets/backgrounds/bcg-11.jpg'
 import ImageFour from '../assets/backgrounds/bcg-10.jpg'
 

@@ -147,7 +147,6 @@ const HeroContent = styled.div`
   width: calc(100% - 100px);
 
   /* CONTENT */
-
   h5 {
     font-size: clamp(0.65rem, 2vw, 0.85rem);
     color: var(--white-clr);

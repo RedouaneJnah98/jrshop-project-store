@@ -35,3 +35,9 @@ body {
   line-height: 1.5;
   background: var(--white-clr);
 }
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}

@@ -6,6 +6,7 @@ const HomePage = () => {
   return (
     <div>
       <Hero slides={SliderData} />
+      <Services />
     </div>
   )
 }

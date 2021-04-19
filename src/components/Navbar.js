@@ -42,8 +42,8 @@ const Navbar = () => {
 }
 
 const Wrapper = styled.nav`
-  height: 5rem;
-  padding: 0.7rem 1.5rem;
+  /* height: 5rem; */
+  padding: 0.5rem 1.5rem;
   background: var(--white-clr);
 
   .nav-center {

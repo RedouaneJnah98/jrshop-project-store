@@ -63,9 +63,10 @@ const Wrapper = styled.section`
     .card {
       padding: 3rem 1.5rem;
       border-radius: 5px;
-      background: #eafeff;
-      box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+      border-radius: 8px;
       cursor: pointer;
+      background: #eafeff;
+      box-shadow: 38px 38px 76px #d7eaeb, -38px -38px 76px #fdffff;
 
       &:hover {
         background: var(--white-clr);

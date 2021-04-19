@@ -37,6 +37,7 @@ const Services = () => {
 const Wrapper = styled.section`
   padding-top: clamp(2.5rem, 5vw, 4rem);
   padding-bottom: clamp(2rem, 5vw, 4rem);
+  background: #fdfbff;
 
   .header {
     display: flex;
@@ -65,12 +66,11 @@ const Wrapper = styled.section`
       border-radius: 5px;
       border-radius: 8px;
       cursor: pointer;
-      background: #eafeff;
-      box-shadow: 38px 38px 76px #d7eaeb, -38px -38px 76px #fdffff;
 
       &:hover {
-        background: var(--white-clr);
         transition: 0.4s all linear;
+        background: #eafeff;
+        box-shadow: 38px 38px 76px #d7eaeb, -38px -38px 76px #fdffff;
       }
 
       .icon {

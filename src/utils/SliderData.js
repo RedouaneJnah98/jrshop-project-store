@@ -19,7 +19,7 @@ export const SliderData = [
     label: 'shop now',
   },
   {
-    title: 'UP TO 50% OFF',
+    title: 'UP TO 50% OFF OUR PRODUCTS',
     subTitle: 'CLOSET CLEANOUT',
     image: ImageThree,
     alt: 'Slider photo',

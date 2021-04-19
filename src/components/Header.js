@@ -4,9 +4,7 @@ import styled from 'styled-components'
 const Header = () => {
   return (
     <Wrapper>
-      <p>free delivrey</p>
-      <p>the best sales</p>
-      <p>919.309.2735 x1716</p>
+      <p>free U.S shipping over $150 USD | free int'l shipping over $200 USD</p>
     </Wrapper>
   )
 }
@@ -14,14 +12,14 @@ const Header = () => {
 const Wrapper = styled.header`
   background: var(--main-clr);
   color: var(--white-clr);
-  padding: 0.6rem;
+  padding: 0.5rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  font-size: 0.75rem;
-  text-transform: uppercase;
+  font-size: 0.6rem;
+  text-transform: capitalize;
   letter-spacing: var(--spacing);
-  font-weight: 400;
+  font-weight: 500;
 `
 
 export default Header

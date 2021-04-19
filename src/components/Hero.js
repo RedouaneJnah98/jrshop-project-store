@@ -16,6 +16,7 @@ const Hero = ({ slides }) => {
 
     setCurrent(current === length - 1 ? 0 : current + 1)
   }
+
   const prevSlide = () => {
     if (timeout.current) {
       clearTimeout(timeout)
@@ -148,13 +149,13 @@ const HeroContent = styled.div`
   /* CONTENT */
 
   h5 {
-    font-size: 0.85rem;
+    font-size: clamp(0.65rem, 2vw, 0.85rem);
     color: var(--white-clr);
     font-weight: 500;
   }
 
   h1 {
-    font-size: 3.75rem;
+    font-size: clamp(2.5rem, 5vw, 3.75rem);
     color: var(--white-clr);
     width: 300px;
     line-height: 1.1;
@@ -169,6 +170,15 @@ const HeroContent = styled.div`
     margin-top: clamp(1.5rem, 5vw, 2.5rem);
     width: clamp(155px, 20vw, 180px);
     height: clamp(45px, 10vw, 55px);
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      background: var(--main-clr);
+      color: var(--white-clr);
+      transition: 0.3s all linear;
+      border: 1px solid var(--white-clr);
+    }
   }
 `
 
@@ -180,17 +190,15 @@ const SliderButtons = styled.div`
   z-index: 10;
 
   .arrow-buttons {
-     width: 50px;
+  width: 50px;
   height: 50px;
   color: var(--white-clr);
   cursor: pointer;
-  background: #000d1a;
-  border-radius: 50px;
+  background: var(--main-clr);
+  border:1px solid var(--white-clr);
   padding: 10px;
-  margin-right: 1rem;
   user-select: none;
   transition: 0.3s;
-  border-color:transparent;
   outline:none;
 
   &:hover {

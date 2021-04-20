@@ -67,6 +67,11 @@ const Wrapper = styled.section`
       border-radius: 8px;
       cursor: pointer;
 
+      &:nth-child(2) {
+        background: #eafeff;
+        box-shadow: 38px 38px 76px #d7eaeb, -38px -38px 76px #fdffff;
+      }
+
       &:hover {
         transition: 0.4s all linear;
         background: #eafeff;

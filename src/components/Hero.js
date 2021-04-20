@@ -7,8 +7,6 @@ const Hero = ({ slides }) => {
   const [current, setCurrent] = useState(0)
   const length = slides.length
 
-  // const timeout = useRef(null)
-
   const nextSlide = () => {
     setCurrent((current) => {
       let next = current + 1
@@ -17,17 +15,9 @@ const Hero = ({ slides }) => {
       }
       return next
     })
-    // if (timeout.current) {
-    //   // clearTimeout(timeout)
-    // }
-
-    // setCurrent(current === length - 1 ? 0 : current + 1)
   }
 
   const prevSlide = () => {
-    // if (timeout.current) {
-    //   clearTimeout(timeout)
-    // }
     setCurrent((current) => {
       let prev = current - 1
       if (prev < 0) {
@@ -35,35 +25,18 @@ const Hero = ({ slides }) => {
       }
       return prev
     })
-
-    // setCurrent(current === 0 ? length - 1 : current - 1)
   }
 
   useEffect(() => {
-    // const nextSlide = () => {
-    // }
-
     let slider = setInterval(() => {
       setCurrent(current === length - 1 ? 0 : current + 1)
-      // setCurrent(current + 1)
     }, 5000)
-
-    // timeout.current = setTimeout(nextSlide, 5000)
 
     return () => {
       clearInterval(slider)
     }
-
-    // return function () {
-    //   if (timeout.current) {
-    //     clearTimeout(timeout)
-    //   }
-    // }
+    // eslint-disable-next-line
   }, [current])
-
-  // if (!Array.isArray(slides) || slides.length <= 0) {
-  //   return null
-  // }
 
   return (
     <HeroSection>
@@ -211,46 +184,22 @@ const SliderButtons = styled.div`
   z-index: 10;
 
   .arrow-buttons {
-  width: 50px;
-  height: 50px;
-  color: var(--white-clr);
-  cursor: pointer;
-  background: var(--main-clr);
-  border:1px solid var(--white-clr);
-  padding: 10px;
-  user-select: none;
-  transition: 0.3s;
-  outline:none;
+    width: 50px;
+    height: 50px;
+    color: var(--white-clr);
+    cursor: pointer;
+    background: var(--main-clr);
+    border: 1px solid var(--white-clr);
+    padding: 10px;
+    user-select: none;
+    transition: 0.3s;
+    outline: none;
 
-  &:hover {
-    background: var(--second-clr);
-    transform: scale(1.05);
+    &:hover {
+      background: var(--second-clr);
+      transform: scale(1.05);
+    }
   }
 `
-
-/* const arrowButtons = css`
-  width: 50px;
-  height: 50px;
-  color: var(--white-clr);
-  cursor: pointer;
-  background: #000d1a;
-  border-radius: 50px;
-  padding: 10px;
-  margin-right: 1rem;
-  user-select: none;
-  transition: 0.3s;
-
-  &:hover {
-    background: var(--second-clr);
-    transform: scale(1.05);
-  }
-`
-
-const NextBtn = styled(IoArrowForward)`
-  ${arrowButtons}
-`
-const PrevBtn = styled(IoArrowBack)`
-  ${arrowButtons}
-` */
 
 export default Hero

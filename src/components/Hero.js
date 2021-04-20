@@ -27,16 +27,16 @@ const Hero = ({ slides }) => {
     })
   }
 
-  useEffect(() => {
-    let slider = setInterval(() => {
-      setCurrent(current === length - 1 ? 0 : current + 1)
-    }, 5000)
+  // useEffect(() => {
+  //   let slider = setInterval(() => {
+  //     setCurrent(current === length - 1 ? 0 : current + 1)
+  //   }, 5000)
 
-    return () => {
-      clearInterval(slider)
-    }
-    // eslint-disable-next-line
-  }, [current])
+  //   return () => {
+  //     clearInterval(slider)
+  //   }
+  //   // eslint-disable-next-line
+  // }, [current])
 
   return (
     <HeroSection>
@@ -51,9 +51,11 @@ const Hero = ({ slides }) => {
                   <HeroContent>
                     <h5>{subTitle}</h5>
                     <h1>{title}</h1>
-                    <button type="button" className="btn">
-                      {label}
-                    </button>
+                    <Link to="/products">
+                      <Button type="button" className="btn">
+                        {label}
+                      </Button>
+                    </Link>
                   </HeroContent>
                 </HeroSlider>
               )}
@@ -154,26 +156,6 @@ const HeroContent = styled.div`
     width: 300px;
     line-height: 1.1;
   }
-
-  .btn {
-    background: var(--white-clr);
-    border-color: transparent;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: clamp(0.85rem, 2vw, 1rem);
-    margin-top: clamp(1.5rem, 5vw, 2.5rem);
-    width: clamp(155px, 20vw, 180px);
-    height: clamp(45px, 10vw, 55px);
-    cursor: pointer;
-    outline: none;
-
-    &:hover {
-      background: var(--main-clr);
-      color: var(--white-clr);
-      transition: 0.3s all linear;
-      border: 1px solid var(--white-clr);
-    }
-  }
 `
 
 const SliderButtons = styled.div`
@@ -199,6 +181,25 @@ const SliderButtons = styled.div`
       background: var(--second-clr);
       transform: scale(1.05);
     }
+  }
+`
+export const Button = styled.button`
+  background: var(--white-clr);
+  border-color: transparent;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: clamp(0.85rem, 2vw, 1rem);
+  margin-top: clamp(1.5rem, 5vw, 2.5rem);
+  width: clamp(155px, 20vw, 180px);
+  height: clamp(45px, 10vw, 55px);
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background: var(--main-clr);
+    color: var(--white-clr);
+    transition: 0.3s all linear;
+    border: 1px solid var(--white-clr);
   }
 `
 

@@ -37,7 +37,7 @@ const Services = () => {
 const Wrapper = styled.section`
   padding-top: clamp(2.5rem, 5vw, 4rem);
   padding-bottom: clamp(2rem, 5vw, 4rem);
-  background: #fdfbff;
+  background: #f2f8ff;
 
   .header {
     display: flex;

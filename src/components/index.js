@@ -18,6 +18,7 @@ import CartContent from './CartContent'
 import PageHero from './PageHero'
 import StripeCheckout from './StripeCheckout'
 import Partners from './Partners'
+import ProductImage from './ProductImage'
 export {
   FeaturedProducts,
   Navbar,
@@ -39,4 +40,5 @@ export {
   PageHero,
   StripeCheckout,
   Partners,
+  ProductImage,
 }

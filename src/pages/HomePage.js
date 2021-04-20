@@ -5,6 +5,7 @@ import {
   Services,
   Partners,
   Contact,
+  ProductImage,
 } from '../components'
 import { SliderData } from '../utils/SliderData'
 
@@ -13,6 +14,7 @@ const HomePage = () => {
     <div>
       <Hero slides={SliderData} />
       <FeaturedProducts />
+      <ProductImage />
       <Partners />
       <Services />
       <Contact />

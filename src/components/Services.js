@@ -72,12 +72,6 @@ const Wrapper = styled.section`
         box-shadow: 38px 38px 76px #d7eaeb, -38px -38px 76px #fdffff;
       }
 
-      &:hover {
-        transition: 0.4s all linear;
-        background: #eafeff;
-        box-shadow: 38px 38px 76px #d7eaeb, -38px -38px 76px #fdffff;
-      }
-
       .icon {
         margin-bottom: 1rem;
       }

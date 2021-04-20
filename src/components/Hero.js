@@ -7,41 +7,63 @@ const Hero = ({ slides }) => {
   const [current, setCurrent] = useState(0)
   const length = slides.length
 
-  const timeout = useRef(null)
+  // const timeout = useRef(null)
 
   const nextSlide = () => {
-    if (timeout.current) {
-      clearTimeout(timeout)
-    }
+    setCurrent((current) => {
+      let next = current + 1
+      if (next > length - 1) {
+        next = 0
+      }
+      return next
+    })
+    // if (timeout.current) {
+    //   // clearTimeout(timeout)
+    // }
 
-    setCurrent(current === length - 1 ? 0 : current + 1)
+    // setCurrent(current === length - 1 ? 0 : current + 1)
   }
 
   const prevSlide = () => {
-    if (timeout.current) {
-      clearTimeout(timeout)
-    }
+    // if (timeout.current) {
+    //   clearTimeout(timeout)
+    // }
+    setCurrent((current) => {
+      let prev = current - 1
+      if (prev < 0) {
+        prev = length - 1
+      }
+      return prev
+    })
 
-    setCurrent(current === 0 ? length - 1 : current - 1)
+    // setCurrent(current === 0 ? length - 1 : current - 1)
   }
 
   useEffect(() => {
-    const nextSlide = () => {
+    // const nextSlide = () => {
+    // }
+
+    let slider = setInterval(() => {
       setCurrent(current === length - 1 ? 0 : current + 1)
+      // setCurrent(current + 1)
+    }, 5000)
+
+    // timeout.current = setTimeout(nextSlide, 5000)
+
+    return () => {
+      clearInterval(slider)
     }
 
-    timeout.current = setTimeout(nextSlide, 5000)
+    // return function () {
+    //   if (timeout.current) {
+    //     clearTimeout(timeout)
+    //   }
+    // }
+  }, [current])
 
-    return function () {
-      if (timeout.current) {
-        clearTimeout(timeout)
-      }
-    }
-  }, [current, length])
-
-  if (!Array.isArray(slides) || slides.length <= 0) {
-    return null
-  }
+  // if (!Array.isArray(slides) || slides.length <= 0) {
+  //   return null
+  // }
 
   return (
     <HeroSection>

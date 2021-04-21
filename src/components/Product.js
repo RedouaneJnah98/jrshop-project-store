@@ -11,7 +11,7 @@ const Product = ({ name, id, price, url }) => {
       <img src={url} alt={name} />
       <div>
         <h4>{name}</h4>
-        <p className="price">{price}</p>
+        <p className="price">{formatPrice(price)}</p>
       </div>
       <Link to={`/products/${id}`} className="link">
         Details <BsArrowRightShort />

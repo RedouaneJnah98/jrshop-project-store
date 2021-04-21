@@ -1,7 +1,11 @@
 import React from 'react'
 
 const Error = () => {
-  return <div>error page</div>
+  return (
+    <div className="center section-center">
+      <h2>Sorry, there was an error...</h2>
+    </div>
+  )
 }
 
 export default Error

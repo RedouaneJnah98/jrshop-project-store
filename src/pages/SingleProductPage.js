@@ -70,10 +70,10 @@ const SingleProductPage = () => {
               PYCA PRO
             </button>
           </div>
-          <h5 className="info">
+          <h5>
             available : <span>{stock > 0 ? 'InStock' : 'Out Of Stock'}</span>{' '}
           </h5>
-          {stock > 0 && <AddToCart />}
+          {stock > 0 && <AddToCart product={product} />}
           <Stars stars={stars} reviews={reviews} />
         </section>
       </div>
@@ -90,6 +90,16 @@ const Wrapper = styled.main`
     flex-wrap: wrap;
   }
 
+  .infos {
+    width: 500px;
+
+    h5 {
+      font-size: 1rem;
+      font-weight: 400;
+      margin: 1rem 0;
+      text-transform: capitalize;
+    }
+  }
   .info-product {
     display: flex;
     justify-content: space-between;
@@ -108,6 +118,9 @@ const Wrapper = styled.main`
 
   .desc {
     font-weight: 300;
+    margin: 1rem 0;
+    word-wrap: break-word;
+    width: 400px;
   }
 
   button {

@@ -23,15 +23,17 @@ const FeaturedProducts = () => {
   }
 
   return (
-    <Wrapper className="section-center">
-      <div className="title">
-        <h2>featured products</h2>
-        <ProductsBtn type="button">all products</ProductsBtn>
-      </div>
-      <div className="featured">
-        {featured.slice(0, 3).map((product) => {
-          return <Product key={product.id} {...product} />
-        })}
+    <Wrapper>
+      <div className="section-center">
+        <div className="title">
+          <h2>featured products</h2>
+          <ProductsBtn type="button">all products</ProductsBtn>
+        </div>
+        <div className="featured">
+          {featured.slice(0, 3).map((product) => {
+            return <Product key={product.id} {...product} />
+          })}
+        </div>
       </div>
     </Wrapper>
   )

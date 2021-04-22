@@ -53,29 +53,31 @@ const SingleProductPage = () => {
   } = product
 
   return (
-    <Wrapper className="section-center">
-      <div className="product-container">
-        <ProductImages images={images} />
-        <section className="infos">
-          <div className="info-product">
-            <h4>{name}</h4>
-            <p className="price">{formatPrice(price)}</p>
-          </div>
-          <p className="desc">{desc}</p>
-          <div>
-            <button type="button" className="white-bcg">
-              {collection}
-            </button>
-            <button type="button" className="black-bcg">
-              PYCA PRO
-            </button>
-          </div>
-          <h5>
-            available : <span>{stock > 0 ? 'InStock' : 'Out Of Stock'}</span>{' '}
-          </h5>
-          {stock > 0 && <AddToCart product={product} />}
-          <Stars stars={stars} reviews={reviews} />
-        </section>
+    <Wrapper>
+      <div className="section-center">
+        <div className="product-container">
+          <ProductImages images={images} />
+          <section className="infos">
+            <div className="info-product">
+              <h4>{name}</h4>
+              <p className="price">{formatPrice(price)}</p>
+            </div>
+            <p className="desc">{desc}</p>
+            <div>
+              <button type="button" className="white-bcg">
+                {collection}
+              </button>
+              <button type="button" className="black-bcg">
+                PYCA PRO
+              </button>
+            </div>
+            <h5>
+              available : <span>{stock > 0 ? 'InStock' : 'Out Of Stock'}</span>{' '}
+            </h5>
+            {stock > 0 && <AddToCart product={product} />}
+            <Stars stars={stars} reviews={reviews} />
+          </section>
+        </div>
       </div>
     </Wrapper>
   )
@@ -83,6 +85,7 @@ const SingleProductPage = () => {
 
 const Wrapper = styled.main`
   padding: 3rem 0;
+  background: var(--second-clr-2);
 
   .product-container {
     display: flex;

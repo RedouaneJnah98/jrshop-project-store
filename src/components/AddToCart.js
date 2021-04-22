@@ -49,6 +49,11 @@ const AddToCart = ({ product }) => {
           })}
         </div>
       </div>
+      <div className="add-btn-container">
+        <Link to="/cart" className="add-btn">
+          add to cart
+        </Link>
+      </div>
     </Wrapper>
   )
 }
@@ -113,6 +118,27 @@ const Wrapper = styled.div`
   .active-size {
     background: var(--main-clr);
     color: var(--white-clr);
+  }
+
+  .add-btn-container {
+    margin-top: 2rem;
+
+    .add-btn {
+      background: var(--main-clr);
+      color: var(--white-clr);
+      width: 100%;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      letter-spacing: var(--spacing);
+
+      &:hover {
+        transition: 0.3s ease-in-out;
+        opacity: 0.9;
+      }
+    }
   }
 `
 

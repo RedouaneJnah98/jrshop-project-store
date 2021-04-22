@@ -91,7 +91,7 @@ const Wrapper = styled.main`
   }
 
   .infos {
-    width: 500px;
+    width: 550px;
 
     h5 {
       font-size: 1rem;

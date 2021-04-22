@@ -21,15 +21,25 @@ const Stars = ({ stars, reviews }) => {
 
   return (
     <Wrapper>
-      <div className="stars">{tempStars}</div>
-      <p className="reviews">({reviews} customer reviews)</p>
+      <div className="stars-reviews">
+        <div className="stars">{tempStars}</div>
+        <p className="reviews">({reviews} customer reviews)</p>
+      </div>
+      <p>Free U.S. Shipping & Returns Over $150</p>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.article`
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  margin-top: 0.5rem;
+
+  .stars-reviews {
+    display: flex;
+    align-items: center;
+  }
 
   span {
     font-size: 0.75rem;
@@ -39,6 +49,10 @@ const Wrapper = styled.article`
   .reviews {
     font-size: 0.75rem;
     margin-left: 0.5rem;
+  }
+
+  p {
+    font-size: 0.75rem;
   }
 `
 

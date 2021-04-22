@@ -8,7 +8,9 @@ import { Link } from 'react-router-dom'
 const Product = ({ name, id, price, url }) => {
   return (
     <Wrapper>
-      <img src={url} alt={name} />
+      <div className="img-hover-zoom">
+        <img src={url} alt={name} />
+      </div>
       <div>
         <h4>{name}</h4>
         <p className="price">{formatPrice(price)}</p>
@@ -41,10 +43,20 @@ const Wrapper = styled.section`
     font-size: 1.1rem;
   }
 
-  img {
+  .img-hover-zoom {
     width: 100%;
     height: 450px;
     object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+    overflow: hidden;
+
+    img {
+      transition: transform 0.5s, filter 1.5s ease-in-out;
+    }
+    &:hover img {
+      transform: scale(1.1);
+    }
   }
 `
 

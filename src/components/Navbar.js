@@ -86,16 +86,18 @@ const Wrapper = styled.nav`
     .nav-links {
       display: flex;
       justify-content: center;
+      align-items: center;
       li {
         margin: 0 1rem;
       }
 
       a {
         list-style: none;
-        font-size: 1.2rem;
+        font-size: 0.85rem;
         color: var(--main-clr);
         text-transform: uppercase;
-        padding: 0.5rem;
+        letter-spacing: var(--spacing);
+        padding: 0.4rem;
 
         &:hover {
           border-bottom: 2px solid var(--main-clr);

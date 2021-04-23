@@ -69,8 +69,6 @@ const Hero = ({ slides }) => {
           <button type="button" onClick={nextSlide} className="arrow-buttons">
             <IoArrowForward />
           </button>
-          {/* <PrevBtn onClick={prevSlide} />
-          <NextBtn onClick={nextSlide} /> */}
         </SliderButtons>
       </HeroWrapper>
     </HeroSection>
@@ -99,7 +97,7 @@ const HeroSlide = styled.div`
   height: 100%;
   z-index: 1;
 `
-const HeroSlider = styled.div`
+export const HeroSlider = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -127,7 +125,7 @@ const HeroSlider = styled.div`
     );
   }
 `
-const HeroImage = styled.img`
+export const HeroImage = styled.img`
   position: absolute;
   top: 0;
   left: 0;
@@ -135,7 +133,7 @@ const HeroImage = styled.img`
   height: 100vh;
   object-fit: cover;
 `
-const HeroContent = styled.div`
+export const HeroContent = styled.div`
   position: relative;
   z-index: 10;
   display: flex;

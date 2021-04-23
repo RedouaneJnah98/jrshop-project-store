@@ -44,6 +44,8 @@ const Navbar = () => {
 const Wrapper = styled.nav`
   padding: 0.5rem 1.5rem;
   background: var(--white-clr);
+  position: relative;
+  z-index: 100;
 
   .nav-center {
     width: 90w;

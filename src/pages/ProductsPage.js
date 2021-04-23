@@ -4,18 +4,20 @@ import styled from 'styled-components'
 
 const ProductsPage = () => {
   return (
-    <main>
-      <PageHero />
-      <Wrapper className="page">
-        <div className="section-center products">
-          <Filters />
-          <div>
-            <Sort />
-            <ProductList />
+    <>
+      <main>
+        <PageHero />
+        <Wrapper className="page">
+          <div className="section-center products">
+            <Filters />
+            <div>
+              <Sort />
+              <ProductList />
+            </div>
           </div>
-        </div>
-      </Wrapper>
-    </main>
+        </Wrapper>
+      </main>
+    </>
   )
 }
 

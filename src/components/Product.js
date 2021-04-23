@@ -29,7 +29,7 @@ const Wrapper = styled.section`
     margin-top: 1rem;
 
     h4 {
-      text-transform: capitalize;
+      text-transform: uppercase;
       font-size: 1rem;
       font-weight: 500;
     }

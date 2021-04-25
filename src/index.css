@@ -39,6 +39,15 @@ body {
   background: var(--white-clr);
 }
 
+.error-msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
 .section-center {
   width: 90vw;
   margin: 0 auto;

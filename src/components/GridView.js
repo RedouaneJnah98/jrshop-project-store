@@ -3,6 +3,12 @@ import styled from 'styled-components'
 import Product from './Product'
 
 const GridView = ({ products }) => {
+  if (products.length < 1) {
+    return (
+      <h5 className="error-msg">Sorry, no products matched your search...</h5>
+    )
+  }
+
   return (
     <Wrapper>
       <div className="products-container">

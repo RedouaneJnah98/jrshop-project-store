@@ -6,9 +6,9 @@ import { useCartContext } from '../context/cart_context'
 import AmountButtons from './AmountButtons'
 
 const AddToCart = ({ product }) => {
-  const { id, colors, size } = product
+  const { id, colors, sizes } = product
   const [mainColor, setMainColor] = useState(colors[0])
-  const [mainSize, setMainSize] = useState(size[0])
+  const [mainSize, setMainSize] = useState(sizes[0])
 
   return (
     <Wrapper>
@@ -33,13 +33,15 @@ const AddToCart = ({ product }) => {
         </div>
         <span>size : {mainSize}</span>
         <div>
-          {size.map((item, index) => {
+          {sizes.map((item, index) => {
             return (
               <button
                 type="button"
                 key={index}
                 className={`${
-                  mainSize === item ? 'size-btn active-size' : 'size-btn'
+                  mainSize === item
+                    ? 'size-btn-product active-size'
+                    : 'size-btn-product'
                 }`}
                 onClick={() => setMainSize(item)}
               >
@@ -102,7 +104,7 @@ const Wrapper = styled.div`
     }
   }
 
-  .size-btn {
+  .size-btn-product {
     width: 40px;
     height: 40px;
     font-size: 0.75rem;

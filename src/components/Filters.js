@@ -123,7 +123,37 @@ const Filters = () => {
             </div>
           </div>
           {/* end of colors */}
+          {/* price */}
+          <div className="form-control">
+            <h5>price</h5>
+            <p className="price">{formatPrice(price)}</p>
+            <input
+              type="range"
+              name="price"
+              min={min_price}
+              max={max_price}
+              value={price}
+              onChange={updateFilters}
+            />
+          </div>
+          {/* end of price */}
+          {/* shipping */}
+          <div className="form-control">
+            <h5>shipping</h5>
+            <label htmlFor="shipping">free shipping</label>
+            <input
+              type="checkbox"
+              name="shipping"
+              id="shipping"
+              onChange={updateFilters}
+              checked={shipping}
+            />
+          </div>
+          {/* end of shipping */}
         </form>
+        <button type="button" onClick={clearFilters} className="clear-btn">
+          clear filters
+        </button>
       </div>
     </Wrapper>
   )
@@ -187,8 +217,18 @@ const Wrapper = styled.section`
     height: clamp(2.5rem, 2vw, 3rem);
     font-weight: 400;
   }
-
   /* end of color */
+
+  label {
+    text-transform: capitalize;
+    margin-right: 1rem;
+  }
+
+  label,
+  p {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-weight: 300;
+  }
 
   .search-input {
     background: var(--second-clr-3);
@@ -224,6 +264,20 @@ const Wrapper = styled.section`
     font-weight: 700;
     cursor: pointer;
     outline: none;
+  }
+
+  .clear-btn {
+    background: #fb3e3e;
+    padding: 0.6rem 1.5rem;
+    color: var(--white-clr);
+    cursor: pointer;
+    margin-top: 1.5rem;
+    font-weight: 500;
+
+    &:hover {
+      transition: 0.3s all linear;
+      background: #f40000;
+    }
   }
 
   .active {

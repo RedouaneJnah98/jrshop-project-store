@@ -1,8 +1,16 @@
 import React from 'react'
 import { Filters, ProductList, Sort, PageHero } from '../components'
 import styled from 'styled-components'
+import { useFilterContext } from '../context/filter_context'
+import Loading from '../components/Loading'
 
 const ProductsPage = () => {
+  const { filtered_products: products } = useFilterContext()
+
+  if (products.length < 1) {
+    return <Loading />
+  }
+
   return (
     <>
       <main>

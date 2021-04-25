@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { useFilterContext } from '../context/filter_context'
 import { getUniqueValues, formatPrice } from '../utils/helpers'
-import { FaCheck } from 'react-icons/fa'
+import { GoCheck } from 'react-icons/go'
 
 const Filters = () => {
   const {
@@ -64,15 +64,6 @@ const Filters = () => {
           {/* sizes */}
           <div className="form-control">
             <h5>sizes</h5>
-            {/* <select name="sizes">
-              {size.map((s, index) => {
-                return (
-                  <option key={index} value={s}>
-                    {s}
-                  </option>
-                )
-              })}
-            </select> */}
             <div className="btn-container">
               {sizes.map((s, index) => {
                 return (
@@ -93,6 +84,45 @@ const Filters = () => {
             </div>
           </div>
           {/* end of sizes */}
+          {/* colors */}
+          <div className="form-control">
+            <h5>color</h5>
+            <div className="colors">
+              {colors.map((c, index) => {
+                if (c === 'all') {
+                  return (
+                    <button
+                      key={index}
+                      onClick={updateFilters}
+                      name="color"
+                      data-color="all"
+                      className={`${
+                        color === 'all' ? 'active-btn-size all-btn' : 'all-btn'
+                      }`}
+                    >
+                      all
+                    </button>
+                  )
+                }
+                return (
+                  <button
+                    type="button"
+                    name="color"
+                    onClick={updateFilters}
+                    key={index}
+                    style={{ background: c }}
+                    className={`${
+                      color === c ? 'active-clr color-btn' : 'color-btn'
+                    }`}
+                    data-color={c}
+                  >
+                    {color === c ? <GoCheck /> : null}
+                  </button>
+                )
+              })}
+            </div>
+          </div>
+          {/* end of colors */}
         </form>
       </div>
     </Wrapper>
@@ -104,6 +134,7 @@ const Wrapper = styled.section`
     margin-top: 1.5rem;
   }
 
+  /* size */
   .size-btn {
     display: inline-block;
     border: 1px solid #e5e9ee;
@@ -118,6 +149,46 @@ const Wrapper = styled.section`
     background: var(--main-clr);
     color: var(--white-clr);
   }
+
+  /* color */
+  .colors {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .color-btn {
+    display: inline-block;
+    border: 1px solid #e5e9ee;
+    width: clamp(2.5rem, 2vw, 3rem);
+    height: clamp(2.5rem, 2vw, 3rem);
+    opacity: 0.6;
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--white-clr);
+    }
+  }
+  .active-clr {
+    opacity: 1;
+    border-color: var(--main-clr);
+  }
+
+  .all-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(2.5rem, 2vw, 3rem);
+    height: clamp(2.5rem, 2vw, 3rem);
+    font-weight: 400;
+  }
+
+  /* end of color */
 
   .search-input {
     background: var(--second-clr-3);

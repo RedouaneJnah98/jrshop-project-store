@@ -60,7 +60,6 @@ const Wrapper = styled.footer`
 
     p {
       cursor: pointer;
-      padding-bottom: 0.4rem;
       font-size: 0.85rem;
       font-weight: 300;
       color: #878787;

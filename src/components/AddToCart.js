@@ -83,9 +83,6 @@ const Wrapper = styled.div`
       opacity: 0.5;
       cursor: pointer;
       outline: none;
-      /* display: flex;
-      align-items: center;
-      justify-content: center; */
       position: relative;
 
       svg {

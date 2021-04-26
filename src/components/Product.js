@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { BsArrowRightShort } from 'react-icons/bs'
 import { formatPrice } from '../utils/helpers'
-import { FaSearch } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 const Product = ({ name, id, price, url }) => {
@@ -30,7 +29,7 @@ const Wrapper = styled.section`
 
     h4 {
       text-transform: uppercase;
-      font-size: 1rem;
+      font-size: clamp(0.85rem, 2vw, 1.1rem);
       font-weight: 500;
     }
   }

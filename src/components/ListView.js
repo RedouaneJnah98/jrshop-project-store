@@ -47,15 +47,16 @@ const Wrapper = styled.div`
   }
 
   .desc {
-    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
     font-weight: 400;
     margin-bottom: 0.65rem;
   }
 
   h4 {
     margin-top: 1.5rem;
-    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-size: clamp(0.85rem, 2vw, 1.1rem);
     text-transform: uppercase;
+    font-weight: 500;
   }
 
   .link {

@@ -6,9 +6,11 @@ import { useCartContext } from '../context/cart_context'
 import AmountButtons from './AmountButtons'
 
 const AddToCart = ({ product }) => {
+  const { addToCart } = useCartContext()
   const { id, colors, sizes } = product
   const [mainColor, setMainColor] = useState(colors[0])
   const [mainSize, setMainSize] = useState(sizes[0])
+  const [amount, setAmount] = useState(1)
 
   return (
     <Wrapper>
@@ -52,7 +54,11 @@ const AddToCart = ({ product }) => {
         </div>
       </div>
       <div className="add-btn-container">
-        <Link to="/cart" className="add-btn">
+        <Link
+          to="/cart"
+          className="add-btn"
+          onClick={() => addToCart(id, mainColor, mainSize, amount, product)}
+        >
           add to cart
         </Link>
       </div>

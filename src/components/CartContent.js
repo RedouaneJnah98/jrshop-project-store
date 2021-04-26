@@ -10,25 +10,29 @@ const CartContent = () => {
   const { cart, clearCart } = useCartContext()
 
   return (
-    <Wrapper className="section-center">
-      <CartColumns />
-      {cart.map((item) => {
-        return <CartItem key={item.id} {...item} />
-      })}
-      <hr />
-      <div className="btn-container">
-        <Link to="/products" className="shopping-btn">
-          continue shopping
-        </Link>
-        <button type="button" className="clear-cart-btn" onClick={clearCart}>
-          clear cart
-        </button>
+    <Wrapper>
+      <div className="section section-center">
+        <CartColumns />
+        {cart.map((item) => {
+          return <CartItem key={item.id} {...item} />
+        })}
+        <hr />
+        <div className="btn-container">
+          <Link to="/products" className="shopping-btn">
+            continue shopping
+          </Link>
+          <button type="button" className="clear-cart-btn" onClick={clearCart}>
+            clear cart
+          </button>
+        </div>
+        <CartTotals />
       </div>
-      <CartTotals />
     </Wrapper>
   )
 }
 
-const Wrapper = styled.section``
+const Wrapper = styled.section`
+  background: var(--second-clr-2);
+`
 
 export default CartContent

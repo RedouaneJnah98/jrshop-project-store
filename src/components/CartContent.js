@@ -18,11 +18,11 @@ const CartContent = () => {
         })}
         <hr />
         <div className="btn-container">
-          <Link to="/products" className="shopping-btn">
+          <Link to="/products" className="btn">
             continue shopping
           </Link>
-          <button type="button" className="clear-cart-btn" onClick={clearCart}>
-            clear cart
+          <button type="button" className="btn clear" onClick={clearCart}>
+            clear shopping cart
           </button>
         </div>
         <CartTotals />
@@ -33,6 +33,31 @@ const CartContent = () => {
 
 const Wrapper = styled.section`
   background: var(--second-clr-2);
+
+  .btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+    .btn {
+      padding: 0.35rem 1rem;
+      text-transform: capitalize;
+      font-weight: 300;
+      letter-spacing: var(--spacing);
+      font-size: clamp(0.9rem, 2vw 1rem);
+      border-color: transparent;
+      cursor: pointer;
+    }
+
+    .clear {
+      background: #fb3e3e;
+
+      &:hover {
+        transition: 0.3s all linear;
+        background: #f40000;
+      }
+    }
+  }
 `
 
 export default CartContent

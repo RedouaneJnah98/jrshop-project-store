@@ -48,6 +48,11 @@ body {
   font-weight: 400;
 }
 
+.btn {
+  background: var(--main-clr);
+  color: var(--white-clr);
+}
+
 .section {
   padding: 5rem 0;
 }

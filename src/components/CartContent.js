@@ -32,8 +32,6 @@ const CartContent = () => {
 }
 
 const Wrapper = styled.section`
-  background: var(--second-clr-2);
-
   .btn-container {
     display: flex;
     justify-content: space-between;

@@ -134,12 +134,55 @@ const Wrapper = styled.article`
   }
 
   @media (min-width: 768px) {
-    .price,
     .subtotal {
       display: block;
+      margin-bottom: 0;
+      color: var(--second-clr);
+      font-weight: 400;
+      font-size: 1rem;
     }
     .small-price {
       display: none;
+    }
+    .price {
+      display: block;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+    .name {
+      font-size: 0.85rem;
+    }
+    .color {
+      font-size: 0.85rem;
+      span {
+        width: 0.75rem;
+        height: 0.75rem;
+      }
+    }
+    grid-template-columns: 1fr 1fr 1fr 1fr auto;
+    align-items: center;
+    grid-template-rows: 100px;
+    .title {
+      height: 100%;
+      display: grid;
+      grid-template-columns: 100px 200px;
+      align-items: center;
+      gap: 1rem;
+      text-align: left;
+    }
+    .amount-btns {
+      width: 100px;
+      button {
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 1rem;
+      }
+      h2 {
+        font-size: 1.1rem;
+      }
+    }
+    .remove-btn {
+      font-size: 1rem;
     }
   }
 `

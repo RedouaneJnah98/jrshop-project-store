@@ -3,16 +3,15 @@ import styled from 'styled-components'
 import { HeroSlider } from './Hero'
 import { HeroImage } from './Hero'
 import { HeroContent } from './Hero'
-import bcgImage from '../assets/backgrounds/product-bcg-2.jpg'
 
-const PageHero = () => {
+const PageHero = ({ title, subtitle, image }) => {
   return (
     <Wrapper>
       <HeroSlider>
-        <ProductHero src={bcgImage} alt="hero background product-img" />
+        <ProductHero src={image} alt="hero background product-img" />
         <HeroContent>
-          <h5>50% off this month</h5>
-          <h1>all products</h1>
+          <h5>{subtitle}</h5>
+          <h1>{title}</h1>
         </HeroContent>
       </HeroSlider>
     </Wrapper>

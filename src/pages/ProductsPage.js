@@ -1,11 +1,16 @@
 import React from 'react'
 import { Filters, ProductList, Sort, PageHero } from '../components'
 import styled from 'styled-components'
+import bcgImage from '../assets/backgrounds/product-bcg-2.jpg'
 
 const ProductsPage = () => {
   return (
     <main>
-      <PageHero />
+      <PageHero
+        title="all products"
+        subtitle="50% OFF of our products"
+        image={bcgImage}
+      />
       <Wrapper className="page">
         <div className="section-center products">
           <Filters />

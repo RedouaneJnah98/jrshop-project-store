@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { useCartContext } from '../context/cart_context'
 import { Link } from 'react-router-dom'
 import { CartContent, PageHero } from '../components'
+import image from '../assets/backgrounds/bcg-7.jpg'
 
 const CartPage = () => {
   const { cart } = useCartContext()
@@ -20,6 +21,7 @@ const CartPage = () => {
 
   return (
     <main>
+      <PageHero title="shopping cart" image={image} />
       <CartContent />
     </main>
   )

@@ -8,6 +8,8 @@ import { useCartContext } from '../context/cart_context'
 import { useUserContext } from '../context/user_context'
 
 const CartButtons = () => {
+  const { total_items } = useCartContext()
+
   return (
     <Wrapper className="cart-btn-wrapper">
       <button type="button" className="auth-btn">
@@ -15,7 +17,7 @@ const CartButtons = () => {
       </button>
       <Link to="/cart" className="cart-btn">
         <GiShoppingCart className="bag-icon" />
-        <span className="cart-value">12</span>
+        <span className="cart-value">{total_items}</span>
       </Link>
     </Wrapper>
   )

@@ -5,6 +5,7 @@
 :root {
   --main-clr: #000;
   --white-clr: #fff;
+  --sidebar-clr: #111112;
   --second-clr: #758090;
   --second-clr-2: #f2f8ff;
   --second-clr-3: hsl(210, 36%, 96%);
@@ -37,6 +38,10 @@ body {
   font-size: 16px;
   line-height: 1.5;
   background: var(--white-clr);
+}
+
+.center-sidebar {
+  padding: 0 1.5rem;
 }
 
 .error-msg {

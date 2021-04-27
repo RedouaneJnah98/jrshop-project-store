@@ -11,6 +11,8 @@ import { useProductsContext } from '../context/products_context'
 import { useUserContext } from '../context/user_context'
 
 const Navbar = () => {
+  const { isSidebarOpen, openSidebar } = useProductsContext()
+
   return (
     <>
       <Header />
@@ -20,7 +22,7 @@ const Navbar = () => {
             <Link to="/">
               <img src={logo} alt="logo" className="logo" />
             </Link>
-            <button type="button" className="nav-toggle">
+            <button type="button" className="nav-toggle" onClick={openSidebar}>
               <GiHamburgerMenu />
             </button>
           </div>
@@ -45,7 +47,7 @@ const Wrapper = styled.nav`
   padding: 0.5rem 1.5rem;
   background: var(--white-clr);
   position: relative;
-  z-index: 100;
+  z-index: 3;
 
   .nav-center {
     width: 90w;

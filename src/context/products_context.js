@@ -54,8 +54,17 @@ export const ProductsProvider = ({ children }) => {
     fetchProducts()
   }, [])
 
+  const openSidebar = () => {
+    dispatch({ type: SIDEBAR_OPEN })
+  }
+  const closeSidebar = () => {
+    dispatch({ type: SIDEBAR_CLOSE })
+  }
+
   return (
-    <ProductsContext.Provider value={{ ...state, fetchSingleProduct }}>
+    <ProductsContext.Provider
+      value={{ ...state, fetchSingleProduct, openSidebar, closeSidebar }}
+    >
       {children}
     </ProductsContext.Provider>
   )

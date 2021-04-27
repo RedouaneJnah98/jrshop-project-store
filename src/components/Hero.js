@@ -52,9 +52,7 @@ const Hero = ({ slides }) => {
                     <h5>{subTitle}</h5>
                     <h1>{title}</h1>
                     <Link to="/products">
-                      <Button type="button" className="btn">
-                        {label}
-                      </Button>
+                      <Button type="button">{label}</Button>
                     </Link>
                   </HeroContent>
                 </HeroSlider>

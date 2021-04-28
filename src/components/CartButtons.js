@@ -9,12 +9,27 @@ import { useUserContext } from '../context/user_context'
 
 const CartButtons = () => {
   const { total_items } = useCartContext()
+  const { loginWithRedirect, logout, myUser } = useUserContext()
 
   return (
     <Wrapper className="cart-btn-wrapper">
-      <button type="button" className="auth-btn">
-        <RiUserSharedFill />
-      </button>
+      {myUser ? (
+        <button
+          type="button"
+          className="auth-btn"
+          onClick={() =>
+            logout({
+              returnTo: window.location.origin,
+            })
+          }
+        >
+          <RiUserReceivedFill />
+        </button>
+      ) : (
+        <button type="button" className="auth-btn" onClick={loginWithRedirect}>
+          <RiUserSharedFill />
+        </button>
+      )}
       <Link to="/cart" className="cart-btn">
         <GiShoppingCart className="bag-icon" />
         <span className="cart-value">{total_items}</span>

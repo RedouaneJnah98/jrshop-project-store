@@ -17,8 +17,9 @@ import { ImPinterest } from 'react-icons/im'
 const Sidebar = () => {
   const { products } = useProductsContext()
   const { isSidebarOpen, closeSidebar } = useProductsContext()
-  const [active, setActive] = useState(true)
+  const { loginWithRedirect, logout, myUser } = useUserContext()
 
+  const [active, setActive] = useState(true)
   const brands = getUniqueValues(products, 'collection')
 
   return (
@@ -63,11 +64,35 @@ const Sidebar = () => {
             {links.map((link) => {
               const { id, url, text } = link
               return (
-                <Link to={url} key={id} onClick={closeSidebar}>
-                  {text}
-                </Link>
+                <li>
+                  <Link to={url} key={id} onClick={closeSidebar}>
+                    {text}
+                  </Link>
+                </li>
               )
             })}
+            {myUser && (
+              <li>
+                <Link to="/checkout">checkout</Link>
+              </li>
+            )}
+            {myUser ? (
+              <button
+                type="button"
+                className="link"
+                onClick={() => logout({ returnTo: window.location.origin })}
+              >
+                logout
+              </button>
+            ) : (
+              <button
+                type="button"
+                className="link"
+                onClick={loginWithRedirect}
+              >
+                login
+              </button>
+            )}
           </ul>
           <div className="social-media">
             <a href="https://twitter.com">
@@ -100,6 +125,18 @@ const SidebarWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 2rem 0rem;
+  }
+
+  .link {
+    background: transparent;
+    border-color: transparent;
+    text-align: left;
+    font-size: 0.9rem;
+    color: var(--white-clr);
+    font-weight: 300;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    cursor: pointer;
   }
 
   hr {
@@ -189,7 +226,10 @@ const SidebarWrapper = styled.div`
     background: var(--sidebar-clr);
     transition: var(--transition);
     transform: translate(-100%);
+    padding-bottom: 2rem;
     z-index: 100;
+    scroll-behavior: smooth;
+    overflow-y: auto;
   }
   .show-sidebar {
     transform: translate(0%);

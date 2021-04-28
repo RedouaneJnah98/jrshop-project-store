@@ -2,17 +2,21 @@ import React from 'react'
 import styled from 'styled-components'
 import Header from './Header'
 import logo from '../assets/logo.svg'
-import { GiHamburgerMenu } from 'react-icons/gi'
+import { RiBarChartHorizontalLine } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
 import { links } from '../utils/constants'
 import CartButtons from './CartButtons'
+import { GiShoppingCart } from 'react-icons/gi'
+
 // contexts Hooks
 import { useProductsContext } from '../context/products_context'
 import { useUserContext } from '../context/user_context'
+import { useCartContext } from '../context/cart_context'
 
 const Navbar = () => {
   const { openSidebar } = useProductsContext()
   const { myUser } = useUserContext()
+  const { total_items } = useCartContext()
 
   return (
     <>
@@ -20,12 +24,16 @@ const Navbar = () => {
       <Wrapper>
         <div className="nav-center">
           <div className="nav-header">
-            <Link to="/">
+            <Link to="/" className="logo-link">
               <img src={logo} alt="logo" className="logo" />
             </Link>
             <button type="button" className="nav-toggle" onClick={openSidebar}>
-              <GiHamburgerMenu />
+              <RiBarChartHorizontalLine />
             </button>
+            <Link to="/cart" className="small-cart-btn">
+              <GiShoppingCart className="bag-icon" />
+              <span className="cart-value">{total_items}</span>
+            </Link>
           </div>
           <ul className="nav-links">
             {links.map((link) => {
@@ -67,7 +75,15 @@ const Wrapper = styled.nav`
     align-items: center;
 
     img {
-      width: 175px;
+      width: 150px;
+    }
+
+    .logo-link {
+      order: 2;
+    }
+
+    .small-cart-btn {
+      order: 3;
     }
 
     .nav-toggle {
@@ -75,6 +91,7 @@ const Wrapper = styled.nav`
       border-color: transparent;
       font-size: 2rem;
       cursor: pointer;
+      order: 0;
     }
   }
 
@@ -88,6 +105,11 @@ const Wrapper = styled.nav`
   @media (min-width: 992px) {
     .nav-toggle {
       display: none;
+    }
+    .nav-header {
+      img {
+        width: 175px;
+      }
     }
     .nav-center {
       display: grid;
@@ -117,6 +139,10 @@ const Wrapper = styled.nav`
 
     .cart-btn-wrapper {
       display: grid;
+    }
+
+    .small-cart-btn {
+      display: none;
     }
   }
 `

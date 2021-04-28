@@ -6,6 +6,7 @@ import Story from './StoryPage'
 import Checkout from './CheckoutPage'
 import Error from './ErrorPage'
 import PrivateRoute from './PrivateRoute'
+import AuthWrapper from './AuthWrapper'
 
 export {
   Home,
@@ -16,4 +17,5 @@ export {
   Checkout,
   Error,
   PrivateRoute,
+  AuthWrapper,
 }

@@ -5,17 +5,29 @@ import App from './App'
 import { ProductsProvider } from './context/products_context'
 import { FilterProvider } from './context/filter_context'
 import { CartProvider } from './context/cart_context'
+import { Auth0Provider } from '@auth0/auth0-react'
+import { UserProvider } from './context/user_context'
+
+// dev-92jtpbf9.us.auth0.com
+// 8EuHnkZfHTue2AdrYUSl0W73LzxVPixw
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ProductsProvider>
-      <FilterProvider>
-        <CartProvider>
-          <App />
-        </CartProvider>
-      </FilterProvider>
-    </ProductsProvider>
-  </React.StrictMode>,
+  <Auth0Provider
+    domain="dev-92jtpbf9.us.auth0.com"
+    clientId="8EuHnkZfHTue2AdrYUSl0W73LzxVPixw"
+    redirectUri={window.location.origin}
+    cacheLocation="localstorage"
+  >
+    <UserProvider>
+      <ProductsProvider>
+        <FilterProvider>
+          <CartProvider>
+            <App />
+          </CartProvider>
+        </FilterProvider>
+      </ProductsProvider>
+    </UserProvider>
+  </Auth0Provider>,
   document.getElementById('root')
 )
 

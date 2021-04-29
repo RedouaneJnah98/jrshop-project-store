@@ -7,7 +7,7 @@ import { useCartContext } from '../context/cart_context'
 import { useUserContext } from '../context/user_context'
 
 const CartButtons = () => {
-  const { total_items } = useCartContext()
+  const { total_items, clearCart } = useCartContext()
   const { loginWithRedirect, logout, myUser } = useUserContext()
 
   return (
@@ -16,11 +16,12 @@ const CartButtons = () => {
         <button
           type="button"
           className="auth-btn"
-          onClick={() =>
+          onClick={() => {
+            clearCart()
             logout({
               returnTo: window.location.origin,
             })
-          }
+          }}
         >
           <RiUserReceivedFill />
         </button>

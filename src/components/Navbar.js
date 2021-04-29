@@ -89,7 +89,7 @@ const Wrapper = styled.nav`
     .nav-toggle {
       background: transparent;
       border-color: transparent;
-      font-size: 2rem;
+      font-size: 1.5rem;
       cursor: pointer;
       order: 0;
     }

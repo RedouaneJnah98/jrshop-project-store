@@ -47,12 +47,12 @@ const Wrapper = styled.section`
 
   h1 {
     margin-bottom: clamp(0.5rem, 5vw, 1rem);
-    font-size: clamp(1.1rem, 2vw, 1.8rem);
+    font-size: clamp(1.5rem, 2vw, 2rem);
   }
 
   p {
     font-weight: 300;
-    font-size: clamp(0.85rem, 2vw, 1rem);
+    font-size: clamp(0.9rem, 2vw, 1rem);
     max-width: 550px;
     width: 100%;
     line-height: 1.7;
@@ -66,8 +66,8 @@ const Wrapper = styled.section`
 
   .email-input,
   .submit-btn {
-    font-size: 1rem;
-    padding: 0.6rem 1rem;
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    padding: clamp(0.4rem, 2vw, 0.6rem) clamp(0.65rem, 2vw, 1rem);
     border: 2px solid var(--main-clr);
   }
 
@@ -86,6 +86,26 @@ const Wrapper = styled.section`
       transition: 0.4s all linear;
       background: var(--white-clr);
       color: var(--main-clr);
+    }
+  }
+
+  @media (max-width: 576px) {
+    article {
+      br {
+        display: none;
+      }
+    }
+
+    .contact-form {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    article {
+      p {
+        margin-bottom: 2rem;
+      }
     }
   }
 `

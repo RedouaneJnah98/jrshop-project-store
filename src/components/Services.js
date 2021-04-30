@@ -45,13 +45,14 @@ const Wrapper = styled.section`
     flex-wrap: wrap;
 
     h2 {
+      font-size: clamp(1.4rem, 2vw, 2rem);
       width: 260px;
     }
 
     p {
       width: 500px;
       font-weight: 300;
-      font-size: 1rem;
+      font-size: clamp(0.9rem, 2vw, 1rem);
     }
   }
 
@@ -85,6 +86,14 @@ const Wrapper = styled.section`
       }
       p {
         font-weight: 300;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .header {
+      p {
+        margin-top: 1rem;
       }
     }
   }

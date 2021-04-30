@@ -25,18 +25,17 @@ const ProductImages = ({ images = [{ url: '' }] }) => {
 }
 
 const Wrapper = styled.section`
-  max-width: 500px;
-  width: 100%;
   display: flex;
   margin-bottom: 2rem;
-  /* justify-content: space-between; */
 
   .main {
+    width: 100%;
     height: 600px;
     margin-left: 1rem;
   }
 
   img {
+    max-width: 500px;
     width: 100%;
     display: block;
     object-fit: cover;
@@ -60,8 +59,6 @@ const Wrapper = styled.section`
   }
 
   @media (max-width: 576px) {
-    flex-wrap: wrap;
-
     .gallery {
       margin-top: 1rem;
       flex-direction: row;
@@ -78,13 +75,20 @@ const Wrapper = styled.section`
       height: 300px;
     }
   }
-  /* @media (max-width:576px) {
+
+  @media (max-width: 768px) {
+    flex-direction: column;
     .gallery {
-      img {
-        width:
-      }
+      margin-top: 1rem;
+      flex-direction: row;
+      order: 2;
     }
-  } */
+    .main {
+      margin: 0;
+      max-width: 900px;
+      width: 100%;
+    }
+  }
 `
 
 export default ProductImages

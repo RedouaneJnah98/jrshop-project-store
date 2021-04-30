@@ -44,12 +44,10 @@ const SingleProductPage = () => {
     price,
     collection,
     stars,
-    size,
     stock,
     reviews,
     images,
     desc,
-    colors,
   } = product
 
   return (
@@ -94,7 +92,6 @@ const Wrapper = styled.main`
   }
 
   .infos {
-    max-width: 550px;
     width: 100%;
 
     h5 {
@@ -124,7 +121,6 @@ const Wrapper = styled.main`
     font-weight: 300;
     margin: 1rem 0;
     word-wrap: break-word;
-    max-width: 400px;
     width: 100%;
     font-size: clamp(0.85rem, 2vw, 1rem);
   }
@@ -142,6 +138,35 @@ const Wrapper = styled.main`
     background: var(--main-clr);
     color: var(--white-clr);
     margin-left: 0.8rem;
+  }
+
+  @media (max-width: 768px) {
+    /* .infos {
+      width: 100%;
+    } */
+  }
+
+  @media (min-width: 992px) {
+    .infos {
+      max-width: 550px;
+    }
+    .desc {
+      max-width: 400px;
+    }
+
+    .product-container {
+      flex-wrap: nowrap;
+    }
+
+    .infos {
+      width: 300px;
+    }
+  }
+
+  @media (min-width: 1070px) {
+    .infos {
+      width: 100%;
+    }
   }
 `
 

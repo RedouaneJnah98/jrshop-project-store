@@ -12,7 +12,7 @@ const Header = () => {
 const Wrapper = styled.header`
   background: var(--main-clr);
   color: var(--white-clr);
-  padding: 0.5rem;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;

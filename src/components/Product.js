@@ -7,22 +7,26 @@ import { Link } from 'react-router-dom'
 const Product = ({ name, id, price, url }) => {
   return (
     <Wrapper>
-      <img src={url} alt={name} />
-      <div>
-        <h4>{name}</h4>
-        <p className="price">{formatPrice(price)}</p>
+      <div className="container">
+        <img src={url} alt={name} />
+        <div className="content">
+          <h4>{name}</h4>
+          <p className="price">{formatPrice(price)}</p>
+        </div>
+        <Link to={`/products/${id}`} className="link">
+          Details <BsArrowRightShort />
+        </Link>
       </div>
-      <Link to={`/products/${id}`} className="link">
-        Details <BsArrowRightShort />
-      </Link>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
-  max-width: 400px;
+  .container {
+    position: relative;
+  }
 
-  div {
+  .content {
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;
@@ -47,9 +51,11 @@ const Wrapper = styled.section`
   }
 
   img {
+    display: block;
     width: 100%;
     height: 250px;
     object-fit: cover;
+    transition: var(--transition);
   }
 `
 

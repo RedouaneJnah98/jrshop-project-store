@@ -26,6 +26,9 @@ const Partners = () => {
 
 const Wrapper = styled.div`
   padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   h4 {
     color: var(--second-clr);
@@ -36,12 +39,21 @@ const Wrapper = styled.div`
 
   .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
   }
   .logo-company {
-    max-width: 160px;
+    max-width: 120px;
     width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      justify-content: center;
+    }
+    .logo-company {
+      margin: 0 1rem;
+    }
   }
 `
 

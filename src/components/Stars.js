@@ -38,6 +38,7 @@ const Wrapper = styled.article`
   .stars-reviews {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   span {
@@ -51,7 +52,13 @@ const Wrapper = styled.article`
   }
 
   p {
-    font-size: 0.75rem;
+    font-size: clamp(0.55rem, 2vw, 0.75rem);
+  }
+
+  @media (max-width: 576px) {
+    .reviews {
+      margin-left: 0;
+    }
   }
 `
 

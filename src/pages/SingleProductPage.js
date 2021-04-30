@@ -94,7 +94,8 @@ const Wrapper = styled.main`
   }
 
   .infos {
-    width: 550px;
+    max-width: 550px;
+    width: 100%;
 
     h5 {
       font-size: 1rem;
@@ -109,12 +110,12 @@ const Wrapper = styled.main`
     align-items: center;
 
     h4 {
-      font-size: 1.25rem;
+      font-size: clamp(1.1rem, 2vw, 1.25rem);
       font-weight: 500;
     }
 
     .price {
-      font-size: 1.1rem;
+      font-size: clamp(1rem, 2vw, 1.1rem);
       color: var(--second-clr);
     }
   }
@@ -123,7 +124,9 @@ const Wrapper = styled.main`
     font-weight: 300;
     margin: 1rem 0;
     word-wrap: break-word;
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
+    font-size: clamp(0.85rem, 2vw, 1rem);
   }
 
   button {

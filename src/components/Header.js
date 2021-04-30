@@ -16,7 +16,7 @@ const Wrapper = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.6rem;
+  font-size: clamp(0.45rem, 2vw, 0.6rem);
   text-transform: capitalize;
   letter-spacing: var(--spacing);
   font-weight: 500;

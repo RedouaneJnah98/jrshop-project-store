@@ -31,8 +31,8 @@ const Navbar = () => {
               <RiBarChartHorizontalLine />
             </button>
             <Link to="/cart" className="small-cart-btn">
-              <GiShoppingCart className="bag-icon" />
-              <span className="cart-value">{total_items}</span>
+              <GiShoppingCart className="bag-icon small-bag" />
+              <span className="cart-value small-cart-value">{total_items}</span>
             </Link>
           </div>
           <ul className="nav-links">
@@ -82,8 +82,20 @@ const Wrapper = styled.nav`
       order: 2;
     }
 
+    /* for small devices */
     .small-cart-btn {
       order: 3;
+    }
+    .small-bag {
+      font-size: 1.5rem;
+    }
+    .small-cart-value {
+      top: -8px;
+      right: -6px;
+      width: 15px;
+      height: 15px;
+      font-size: 0.6rem;
+      padding: 10px;
     }
 
     .nav-toggle {

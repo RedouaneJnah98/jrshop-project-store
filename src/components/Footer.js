@@ -30,14 +30,15 @@ const Footer = () => {
 const Wrapper = styled.footer`
   background: var(--main-clr);
   color: var(--white-clr);
-  padding: 1rem;
+  padding: 2rem 0;
 
   .footer-section {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    max-width: var(--max-width);
-    margin: 0 auto;
+    justify-content: center;
+    /* max-width: var(--max-width); */
+    /* margin: 0 auto; */
   }
 
   svg {
@@ -57,8 +58,20 @@ const Wrapper = styled.footer`
     .privacy {
       margin: 0 1.5rem;
     }
+  }
+  p {
+    display: none;
+  }
 
+  @media (max-width: 600px) {
+    h5 {
+      margin-top: 0.5rem;
+    }
+  }
+
+  @media (min-width: 992px) {
     p {
+      display: grid;
       cursor: pointer;
       font-size: 0.85rem;
       font-weight: 300;
@@ -68,12 +81,17 @@ const Wrapper = styled.footer`
         border-bottom: 1px solid #878787;
       }
     }
+
+    .footer-info {
+      margin-top: 1rem;
+    }
   }
 
   h5 {
-    font-size: 0.85rem;
+    font-size: clamp(0.75rem, 2vw, 0.85rem);
     font-weight: 300;
     text-transform: capitalize;
+    letter-spacing: 1px;
   }
 `
 

@@ -34,6 +34,7 @@ const Wrapper = styled.div`
   @media (min-width: 768px) {
     .products {
       grid-template-columns: 200px 1fr;
+      grid-gap: 3rem;
     }
   }
 `

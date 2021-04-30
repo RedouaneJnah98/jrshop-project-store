@@ -52,10 +52,21 @@ const Wrapper = styled.section`
     }
 
     .product-img {
-      max-width: 660px;
       width: 100%;
       height: 600px;
       object-fit: cover;
+    }
+  }
+
+  @media (min-width: 992px) {
+    img {
+      max-width: 660px;
+    }
+  }
+
+  @media (min-width: 1000px) and (max-width: 1070px) {
+    img {
+      max-width: 500px;
     }
   }
 `

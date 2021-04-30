@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { GoCheck } from 'react-icons/go'
 import { useCartContext } from '../context/cart_context'
-import AmountButtons from './AmountButtons'
 
 const AddToCart = ({ product }) => {
   const { addToCart } = useCartContext()
@@ -34,7 +33,7 @@ const AddToCart = ({ product }) => {
           })}
         </div>
         <span>size : {mainSize}</span>
-        <div>
+        <div className="size-container">
           {sizes.map((item, index) => {
             return (
               <button
@@ -107,6 +106,10 @@ const Wrapper = styled.div`
     }
   }
 
+  .size-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .size-btn-product {
     width: 40px;
     height: 40px;

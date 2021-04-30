@@ -108,6 +108,19 @@ const Wrapper = styled.section`
       }
     }
   }
+
+  @media (min-width: 1000px) and (max-width: 1070px) {
+    article {
+      width: 50%;
+      margin-right: 1rem;
+      br {
+        display: none;
+      }
+    }
+    .contact-form {
+      width: 45%;
+    }
+  }
 `
 
 export default Contact

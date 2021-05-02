@@ -45,9 +45,6 @@ const Wrapper = styled.section`
     padding-top: 5rem;
     padding-bottom: 0;
     margin-top: 10rem;
-    .bcg {
-      height: calc(100vh - 10rem);
-    }
 
     .team-container {
       display: grid;
@@ -56,7 +53,6 @@ const Wrapper = styled.section`
       margin-bottom: 0;
     }
     .box-container {
-      /* height: calc(100vh - 10rem); */
       transform: translateY(-30%);
     }
   }

@@ -7,14 +7,12 @@ const ManagementTeam = () => {
   return (
     <Wrapper>
       <div className="section-center">
-        <div className="box-container">
-          <h1>management team</h1>
-          <article>
-            {teamData.map((item) => {
-              return <SinglePerson key={item.id} {...item} />
-            })}
-          </article>
-        </div>
+        <h1>management team</h1>
+        <article>
+          {teamData.map((item) => {
+            return <SinglePerson key={item.id} {...item} />
+          })}
+        </article>
       </div>
     </Wrapper>
   )
@@ -29,8 +27,20 @@ const Wrapper = styled.section`
 
   @media (min-width: 992px) {
     article {
+      /* display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; */
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+      column-gap: 3rem;
+      row-gap: 5rem;
+      /* max-width: 00px; */
+      width: 100%;
+
+      img {
+        /* object-position: bottom top; */
+        /* height: 350px; */
+      }
     }
   }
 `

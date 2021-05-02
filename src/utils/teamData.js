@@ -3,8 +3,8 @@ import image2 from '../assets/backgrounds/photo-4.jpg'
 import image3 from '../assets/backgrounds/photo-7.jpg'
 import image4 from '../assets/backgrounds/photo-8.jpg'
 import image5 from '../assets/backgrounds/photo-3.jpg'
-import image6 from '../assets/backgrounds/photo-6.jpg'
-import image7 from '../assets/backgrounds/photo-2.jpg'
+import image6 from '../assets/backgrounds/photo-10.jpg'
+import image7 from '../assets/backgrounds/photo-11.jpg'
 
 const team = [
   {
@@ -52,19 +52,19 @@ export const teamData = [
   },
   {
     id: 3,
-    name: 'InaMarie Johnson',
-    position: 'Chief People and Diversity Officer ',
-    image: image6,
-    text:
-      'Ms. Johnson has served as our Chief People and Diversity Officer since June 2018. From July 2015 to June 2018, Ms. Johnson served as Senior Vice President and Chief Human Resources Officer for Plantronics, Inc., an audio communications company. From September 2011 to June 2015 she held the role of Chief Human Resources Officer at UTi Worldwide Inc., a supply chain management company. Prior to that, Ms. Johnson held senior leadership roles at Honeywell International Inc., an international technology and manufacturing company, including Vice President, Human Resources Functional Transformation and Vice President, Human Resources, Communication and Six Sigma. Ms. Johnson holds a B.A. in Social Sciences, with an emphasis in Human Resource Management, from the University of California, Berkeley, and a M.A. in Organizational Development and Management from John F. Kennedy University.',
-  },
-  {
-    id: 4,
     name: 'Norman Gennaro',
     position: 'SVP of Investor Relations and Strategic Finance & Analytics',
     image: image7,
     text:
       'Mr. Gennaro has served as our President of Sales since January 2018. From April 2012 to December 2017, Mr. Gennaro served as a Territories Market Segment Leader for North America for Amazon Web Services, a software company. Prior to that, he held senior roles at the Oracle Corporation, a software company, including Vice President from March 2006 to March 2012, and Senior Technical Director from January 2000 to March 2006. Mr. Gennaro holds a Management in Information Systems degree from the University of Notre Dame and an M.B.A. from the Notre Dame de Namur University.',
+  },
+  {
+    id: 4,
+    name: 'InaMarie Johnson',
+    position: 'Chief People and Diversity Officer ',
+    image: image6,
+    text:
+      'Ms. Johnson has served as our Chief People and Diversity Officer since June 2018. From July 2015 to June 2018, Ms. Johnson served as Senior Vice President and Chief Human Resources Officer for Plantronics, Inc., an audio communications company. From September 2011 to June 2015 she held the role of Chief Human Resources Officer at UTi Worldwide Inc., a supply chain management company. Prior to that, Ms. Johnson held senior leadership roles at Honeywell International Inc., an international technology and manufacturing company, including Vice President, Human Resources Functional Transformation and Vice President, Human Resources, Communication and Six Sigma. Ms. Johnson holds a B.A. in Social Sciences, with an emphasis in Human Resource Management, from the University of California, Berkeley, and a M.A. in Organizational Development and Management from John F. Kennedy University.',
   },
 ]
 

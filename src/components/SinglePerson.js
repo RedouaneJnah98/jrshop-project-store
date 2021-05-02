@@ -61,8 +61,7 @@ const Wrapper = styled.article`
       color: #17494d;
       font-weight: 300;
       font-family: 'Sora', sans-serif;
-      font-size: clamp(0.85rem, 2vw, 1rem);
-      line-height: 1.7;
+      font-size: clamp(0.75rem, 2vw, 0.9rem);
     }
   }
 
@@ -73,13 +72,6 @@ const Wrapper = styled.article`
 
   @media (max-width: 576px) {
     margin-top: 2rem;
-  }
-
-  @media (min-width: 992px) {
-    .person {
-      max-width: 370px;
-      width: 100%;
-    }
   }
 `
 

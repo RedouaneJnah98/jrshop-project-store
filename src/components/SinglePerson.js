@@ -71,7 +71,8 @@ const Wrapper = styled.article`
   }
 
   @media (max-width: 576px) {
-    margin-top: 2rem;
+    margin-top: 4rem;
+    padding-bottom: 3rem;
   }
 `
 

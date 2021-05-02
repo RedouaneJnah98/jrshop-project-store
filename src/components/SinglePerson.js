@@ -74,6 +74,10 @@ const Wrapper = styled.article`
     font-size: 1.3rem;
   }
 
+  @media (max-width: 576px) {
+    margin-top: 2rem;
+  }
+
   @media (min-width: 992px) {
     .person {
       max-width: 370px;

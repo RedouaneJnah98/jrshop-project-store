@@ -19,6 +19,9 @@ import PageHero from './PageHero'
 import StripeCheckout from './StripeCheckout'
 import Partners from './Partners'
 import ProductImage from './ProductImage'
+import Article from './Article'
+import HeroAbout from './HeroAbout'
+
 export {
   FeaturedProducts,
   Navbar,
@@ -41,4 +44,6 @@ export {
   StripeCheckout,
   Partners,
   ProductImage,
+  HeroAbout,
+  Article,
 }

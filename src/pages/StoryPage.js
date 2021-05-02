@@ -1,10 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
+import { HeroAbout, Article } from '../components'
 
 const StoryPage = () => {
   return (
-    <Wrapper>
-      <h1>story page</h1>
+    <Wrapper className="section-center">
+      <HeroAbout />
+      <Article />
     </Wrapper>
   )
 }

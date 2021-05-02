@@ -1,10 +1,6 @@
-import React from 'react'
 import firstIcon from '../assets/icons/icon-1.png'
 import secondIcon from '../assets/icons/icon-2.png'
 import threeIcon from '../assets/icons/icon-3.png'
-// import { RiTruckFill } from 'react-icons/ri'
-// import { GiReturnArrow } from 'react-icons/gi'
-// import { MdVerifiedUser } from 'react-icons/md'
 
 export const links = [
   {

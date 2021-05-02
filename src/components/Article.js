@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import image from '../assets/backgrounds/test.jpg'
+import image from '../assets/backgrounds/about-img.jpg'
 
 const Article = () => {
   return (

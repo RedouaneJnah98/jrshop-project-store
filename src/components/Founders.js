@@ -6,24 +6,27 @@ import SinglePerson from './SinglePerson'
 const TeamManagement = () => {
   return (
     <Wrapper>
-      <div className="section-center">
-        <section className="box-container">
-          <h1>Founders</h1>
+      <div className="bcg">
+        <div className="section-center">
+          <section className="box-container">
+            <h1>Founders</h1>
 
-          <article className="team-container">
-            {team.map((item) => {
-              return <SinglePerson key={item.id} {...item} />
-            })}
-          </article>
-        </section>
+            <article className="team-container">
+              {team.map((item) => {
+                return <SinglePerson key={item.id} {...item} />
+              })}
+            </article>
+          </section>
+        </div>
       </div>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
-  padding: 2rem 0 4rem 0;
-  background: var(--second-clr-2);
+  .bcg {
+    background: var(--second-clr-2);
+  }
 
   .team-container {
     margin-top: 1.5rem;
@@ -34,11 +37,17 @@ const Wrapper = styled.section`
     font-weight: 600;
   }
 
+  @media (max-width: 576px) {
+    padding: 2rem 0 4rem 0;
+  }
+
   @media (min-width: 992px) {
     padding-top: 5rem;
     padding-bottom: 0;
     margin-top: 10rem;
-    height: 80vh;
+    .bcg {
+      height: calc(100vh - 10rem);
+    }
 
     .team-container {
       display: grid;
@@ -47,7 +56,8 @@ const Wrapper = styled.section`
       margin-bottom: 0;
     }
     .box-container {
-      transform: translateY(-40%);
+      /* height: calc(100vh - 10rem); */
+      transform: translateY(-30%);
     }
   }
 `

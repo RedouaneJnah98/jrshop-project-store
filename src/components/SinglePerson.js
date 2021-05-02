@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi'
 
-const SinglePerson = ({ id, text, name, position, image }) => {
+const SinglePerson = ({ text, name, position, image }) => {
   const [showText, setShowText] = useState(false)
 
   return (
     <Wrapper>
-      <div key={id} className="person">
+      <div className="person">
         <img src={image} alt="ceo founder" className="img-person" />
         <header className="infos">
           <div className="name_icon">
@@ -21,7 +21,7 @@ const SinglePerson = ({ id, text, name, position, image }) => {
             </button>
           </div>
           <h6>{position}</h6>
-          {showText && <p className="text-animation">{text}</p>}
+          {showText && <p>{text}</p>}
         </header>
       </div>
     </Wrapper>
@@ -63,9 +63,6 @@ const Wrapper = styled.article`
       font-family: 'Sora', sans-serif;
       font-size: clamp(0.85rem, 2vw, 1rem);
       line-height: 1.7;
-    }
-    .text-animation {
-      transition: all 2s ease-in-out;
     }
   }
 

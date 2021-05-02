@@ -1,13 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import { HeroAbout, Article, TeamManagement } from '../components'
+import { HeroAbout, Article, Founders, ManagementTeam } from '../components'
 
 const StoryPage = () => {
   return (
     <Wrapper>
       <HeroAbout />
       <Article />
-      <TeamManagement />
+      <Founders />
+      <ManagementTeam />
     </Wrapper>
   )
 }

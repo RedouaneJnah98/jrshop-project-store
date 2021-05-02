@@ -20,7 +20,7 @@ const team = [
       'Ms. Berbue co-founded JRShop and served as our Chief Technology Officer from 2007 through 2017. Mr. Primdahl holds a Bachelors in chemical engineering from the Technical University of Denmark and a Masters, Sci. IT. in computer science and information technology from the IT University of Copenhagen.',
   },
   {
-    id: 1,
+    id: 3,
     name: 'Alexander Aghassipour',
     position: 'Founder Emeritus',
     image: image3,

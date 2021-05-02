@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { HeroAbout, Article } from '../components'
+import { HeroAbout, Article, TeamManagement } from '../components'
 
 const StoryPage = () => {
   return (
-    <Wrapper className="section-center">
+    <Wrapper>
       <HeroAbout />
       <Article />
+      <TeamManagement />
     </Wrapper>
   )
 }

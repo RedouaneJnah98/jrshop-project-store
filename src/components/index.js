@@ -21,6 +21,7 @@ import Partners from './Partners'
 import ProductImage from './ProductImage'
 import Article from './Article'
 import HeroAbout from './HeroAbout'
+import TeamManagement from './TeamManagement'
 
 export {
   FeaturedProducts,
@@ -46,4 +47,5 @@ export {
   ProductImage,
   HeroAbout,
   Article,
+  TeamManagement,
 }

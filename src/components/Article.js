@@ -4,7 +4,7 @@ import image from '../assets/backgrounds/about-img.jpg'
 
 const Article = () => {
   return (
-    <Wrapper>
+    <Wrapper className="section-center">
       <div className="container">
         <img src={image} alt="CEO Founder" className="img-about" />
         <div className="title">
@@ -79,6 +79,7 @@ const Wrapper = styled.article`
     p {
       font-size: clamp(0.85rem, 2vw, 1rem);
       line-height: 1.8;
+      font-family: 'Sora', sans-serif;
     }
   }
 

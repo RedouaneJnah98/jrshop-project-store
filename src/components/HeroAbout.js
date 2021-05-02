@@ -5,7 +5,7 @@ import smallImage from '../assets/backgrounds/about-bcg-2.jpg'
 
 const HeroAbout = () => {
   return (
-    <Wrapper>
+    <Wrapper className="section-center">
       <article className="title">
         <h5>our story</h5>
         <h1>born in brooklyn</h1>

@@ -70,9 +70,8 @@ const Wrapper = styled.article`
     font-size: 1.3rem;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 900px) {
     margin-top: 4rem;
-    padding-bottom: 3rem;
   }
 `
 

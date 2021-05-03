@@ -70,7 +70,6 @@ const Wrapper = styled.article`
   }
 
   .img-about {
-    max-width: 500px;
     width: 100%;
     object-fit: cover;
   }
@@ -88,10 +87,12 @@ const Wrapper = styled.article`
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
+      grid-column-gap: 3rem;
       padding: 6rem 0 0 0;
     }
 
     .img-about {
+      max-width: 500px;
       height: 500px;
     }
     .text-container {

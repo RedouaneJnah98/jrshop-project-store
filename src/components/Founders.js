@@ -23,9 +23,10 @@ const TeamManagement = () => {
 
 const Wrapper = styled.section`
   background: var(--second-clr-2);
+  padding: 2rem 0 4rem 0;
 
   .team-container {
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
   }
 
   h1 {
@@ -33,8 +34,8 @@ const Wrapper = styled.section`
     font-weight: 600;
   }
 
-  @media (max-width: 576px) {
-    padding: 2rem 0 4rem 0;
+  @media (min-width: 768px) {
+    padding: 4rem 0 8rem 0;
   }
 
   @media (min-width: 992px) {
@@ -44,7 +45,6 @@ const Wrapper = styled.section`
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 2rem;
-      margin-bottom: 0;
     }
   }
 `

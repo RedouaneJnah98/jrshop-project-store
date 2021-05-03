@@ -45,6 +45,7 @@ const Wrapper = styled.div`
   .logo-company {
     max-width: 120px;
     width: 100%;
+    object-fit: cover;
   }
 
   @media (max-width: 600px) {

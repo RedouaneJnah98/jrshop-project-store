@@ -66,8 +66,10 @@ const Wrapper = styled.section`
 
   .email-input,
   .submit-btn {
-    font-size: clamp(0.85rem, 2vw, 1rem);
-    padding: clamp(0.4rem, 2vw, 0.6rem) clamp(0.65rem, 2vw, 1rem);
+    font-size: 0.85rem;
+    padding: 0.4rem 0.65rem;
+    /* font-size: clamp(0.85rem, 2vw, 1rem); */
+    /* padding: clamp(0.4rem, 2vw, 0.6rem) clamp(0.65rem, 2vw, 1rem); */
     border: 2px solid var(--main-clr);
   }
 
@@ -106,6 +108,13 @@ const Wrapper = styled.section`
       p {
         margin-bottom: 2rem;
       }
+    }
+  }
+  @media (min-width: 768px) {
+    .email-input,
+    .submit-btn {
+      font-size: 1rem;
+      padding: 0.6rem 1rem;
     }
   }
 

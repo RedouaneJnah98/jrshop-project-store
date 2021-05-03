@@ -16,10 +16,14 @@ const Wrapper = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: clamp(0.45rem, 2vw, 0.6rem);
+  font-size: 0.45rem;
   text-transform: capitalize;
   letter-spacing: var(--spacing);
   font-weight: 500;
+
+  @media (min-width: 576px) {
+    font-size: 0.7rem;
+  }
 `
 
 export default Header

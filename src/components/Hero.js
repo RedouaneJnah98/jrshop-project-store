@@ -141,13 +141,15 @@ export const HeroContent = styled.div`
 
   /* CONTENT */
   h5 {
-    font-size: clamp(0.65rem, 2vw, 0.85rem);
+    font-size: 0.7rem;
+    /* font-size: clamp(0.65rem, 2vw, 0.85rem); */
     color: var(--white-clr);
     font-weight: 500;
   }
 
   h1 {
-    font-size: clamp(2.5rem, 5vw, 3.75rem);
+    font-size: 2.5rem;
+    /* font-size: clamp(2.5rem, 5vw, 3.75rem); */
     color: var(--white-clr);
     width: 300px;
     line-height: 1.1;
@@ -186,8 +188,10 @@ export const Button = styled.button`
   font-weight: 600;
   font-size: clamp(0.85rem, 2vw, 1rem);
   margin-top: clamp(1.5rem, 5vw, 2.5rem);
-  width: clamp(155px, 20vw, 180px);
-  height: clamp(45px, 10vw, 55px);
+  width: 155px;
+  height: 45px;
+  /* width: clamp(155px, 20vw, 180px);
+  height: clamp(45px, 10vw, 55px); */
   cursor: pointer;
   outline: none;
 

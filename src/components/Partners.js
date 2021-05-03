@@ -49,9 +49,9 @@ const Wrapper = styled.div`
   }
 
   @media (max-width: 600px) {
-    .container {
+    /* .container {
       justify-content: center;
-    }
+    } */
     .logo-company {
       margin: 0 1rem;
     }

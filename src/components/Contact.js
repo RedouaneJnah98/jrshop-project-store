@@ -68,9 +68,8 @@ const Wrapper = styled.section`
   .submit-btn {
     font-size: 0.85rem;
     padding: 0.4rem 0.65rem;
-    /* font-size: clamp(0.85rem, 2vw, 1rem); */
-    /* padding: clamp(0.4rem, 2vw, 0.6rem) clamp(0.65rem, 2vw, 1rem); */
     border: 2px solid var(--main-clr);
+    outline: none;
   }
 
   .email-input::placeholder {

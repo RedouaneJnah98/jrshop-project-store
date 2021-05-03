@@ -168,9 +168,9 @@ const Wrapper = styled.section`
   .size-btn {
     display: inline-block;
     border: 1px solid #e5e9ee;
-    width: clamp(2.5rem, 2vw, 3rem);
-    height: clamp(2.5rem, 2vw, 3rem);
-    font-size: clamp(0.85rem, 2vw, 0.9rem);
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.85rem;
     font-weight: 400;
   }
 
@@ -189,8 +189,8 @@ const Wrapper = styled.section`
   .color-btn {
     display: inline-block;
     border: 1px solid #e5e9ee;
-    width: clamp(2.5rem, 2vw, 3rem);
-    height: clamp(2.5rem, 2vw, 3rem);
+    width: 2.5rem;
+    height: 2.5rem;
     opacity: 0.6;
     position: relative;
 
@@ -213,8 +213,8 @@ const Wrapper = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: clamp(2.5rem, 2vw, 3rem);
-    height: clamp(2.5rem, 2vw, 3rem);
+    width: 2.5rem;
+    height: 2.5rem;
     font-weight: 400;
   }
   /* end of color */
@@ -226,7 +226,7 @@ const Wrapper = styled.section`
 
   label,
   p {
-    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-size: 0.9rem;
     font-weight: 300;
   }
 
@@ -289,6 +289,25 @@ const Wrapper = styled.section`
     .content {
       position: sticky;
       top: 1rem;
+    }
+    label,
+    p {
+      font-size: 1rem;
+    }
+
+    .all-btn {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    .size-btn {
+      width: 3rem;
+      height: 3rem;
+      font-size: 0.9rem;
+    }
+    .color-btn {
+      width: 3rem;
+      height: 3rem;
     }
   }
 `

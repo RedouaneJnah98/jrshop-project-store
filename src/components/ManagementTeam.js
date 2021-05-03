@@ -27,15 +27,15 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 992px) {
-    padding-bottom: 3rem;
+    padding: 4rem 0 8rem 0;
 
     article {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
       column-gap: 3rem;
-      row-gap: 5rem;
+      row-gap: 2.5rem;
       width: 100%;
-      margin-top: 4rem;
+      margin-top: 2.5rem;
     }
   }
 `

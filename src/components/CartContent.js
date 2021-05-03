@@ -35,15 +35,19 @@ const Wrapper = styled.section`
   .btn-container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
     margin-top: 1rem;
 
     .btn {
-      padding: 0.35rem 1rem;
+      padding: 0.5rem 1rem;
       text-transform: capitalize;
       font-weight: 300;
       letter-spacing: var(--spacing);
-      font-size: clamp(0.9rem, 2vw 1rem);
+      font-size: clamp(0.8rem, 5vw 1rem);
+      /* font-size: 0.7rem; */
       border-color: transparent;
+      /* width: 100%; */
       cursor: pointer;
     }
 
@@ -53,6 +57,15 @@ const Wrapper = styled.section`
       &:hover {
         transition: 0.3s all linear;
         background: #f40000;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .btn-container {
+      text-align: center;
+      .btn {
+        width: 100%;
       }
     }
   }

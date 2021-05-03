@@ -26,7 +26,12 @@ const Wrapper = styled.section`
   h1,
   h5 {
     text-transform: uppercase;
-    width: 400px;
+  }
+
+  @media (min-width: 992px) {
+    h1 {
+      width: 400px;
+    }
   }
 `
 

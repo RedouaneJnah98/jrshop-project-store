@@ -27,16 +27,16 @@ const Hero = ({ slides }) => {
     })
   }
 
-  // useEffect(() => {
-  //   let slider = setInterval(() => {
-  //     setCurrent(current === length - 1 ? 0 : current + 1)
-  //   }, 5000)
+  useEffect(() => {
+    let slider = setInterval(() => {
+      setCurrent(current === length - 1 ? 0 : current + 1)
+    }, 5000)
 
-  //   return () => {
-  //     clearInterval(slider)
-  //   }
-  //   // eslint-disable-next-line
-  // }, [current])
+    return () => {
+      clearInterval(slider)
+    }
+    // eslint-disable-next-line
+  }, [current])
 
   return (
     <HeroSection>

@@ -38,8 +38,7 @@ const Wrapper = styled.section`
   }
 
   @media (min-width: 992px) {
-    /* padding-top: 5rem;
-    margin-top: 10rem; */
+    padding: 6rem 0;
 
     .team-container {
       display: grid;
@@ -47,9 +46,6 @@ const Wrapper = styled.section`
       grid-gap: 2rem;
       margin-bottom: 0;
     }
-    /* .box-container {
-      transform: translateY(-30%);
-    } */
   }
 `
 

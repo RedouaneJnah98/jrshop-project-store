@@ -52,7 +52,13 @@ const Wrapper = styled.article`
   }
 
   p {
-    font-size: clamp(0.55rem, 2vw, 0.75rem);
+    font-size: 0.55rem;
+  }
+
+  @media (min-width: 576px) {
+    p {
+      font-size: 0.75rem;
+    }
   }
 
   @media (max-width: 576px) {

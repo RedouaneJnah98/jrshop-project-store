@@ -55,13 +55,11 @@ const Wrapper = styled.article`
     margin-top: 2rem;
     h5 {
       color: #9bce0a;
-      line-height: 0.8;
       font-size: 0.8rem;
     }
     h2 {
       text-transform: uppercase;
-      font-size: 2rem;
-      line-height: 1.4;
+      font-size: 2.2rem;
     }
     h6 {
       margin-top: 0.5rem;

@@ -34,7 +34,7 @@ const Article = () => {
             decreasing our carbon footprint.{' '}
           </p>
         </div>
-        <div>
+        <div className="second-text">
           <p>We are inspired by the no BS attitude of iconic retro sneakers.</p>
           <p>
             We design them to be trend-resistant, and super easy to dress up or
@@ -56,16 +56,16 @@ const Wrapper = styled.article`
     h5 {
       color: #9bce0a;
       line-height: 0.8;
-      font-size: clamp(0.8rem, 2vw, 1rem);
+      font-size: 0.8rem;
     }
     h2 {
       text-transform: uppercase;
-      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-size: 2rem;
       line-height: 1.4;
     }
     h6 {
       margin-top: 0.5rem;
-      font-size: clamp(0.8rem, 2vw, 1rem);
+      font-size: 0.8rem;
     }
   }
 
@@ -76,9 +76,33 @@ const Wrapper = styled.article`
   .text-container {
     margin-top: 1rem;
     p {
-      font-size: clamp(0.85rem, 2vw, 1rem);
+      font-size: 0.85rem;
       line-height: 1.8;
       font-family: 'Sora', sans-serif;
+    }
+  }
+
+  .second-text {
+    margin-top: 1rem;
+  }
+
+  @media (min-width: 576px) {
+    .second-text {
+      margin-top: 0;
+    }
+    .title {
+      h5 {
+        font-size: 1rem;
+      }
+      h2 {
+        font-size: 2.8rem;
+      }
+      h6 {
+        font-size: 1rem;
+      }
+    }
+    p {
+      font-size: 1rem;
     }
   }
 

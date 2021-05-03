@@ -55,19 +55,29 @@ const Wrapper = styled.article`
       font-size: 1rem;
       font-weight: 300;
       font-family: 'Sora', sans-serif;
-      font-size: clamp(0.9rem, 2vw, 1rem);
+      font-size: 0.9rem;
+      font-size: 0.9rem;
     }
     p {
       color: #17494d;
       font-weight: 300;
       font-family: 'Sora', sans-serif;
-      font-size: clamp(0.75rem, 2vw, 0.9rem);
+      font-size: 0.75rem;
     }
   }
 
   .chevron {
     background: transparent;
     font-size: 1.3rem;
+  }
+
+  @media (min-width: 576px) {
+    h6 {
+      font-size: 1rem;
+    }
+    p {
+      font-size: 0.9rem;
+    }
   }
 
   @media (max-width: 900px) {

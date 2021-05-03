@@ -46,13 +46,13 @@ const Wrapper = styled.section`
   padding: 4rem 0;
 
   h1 {
-    margin-bottom: clamp(0.5rem, 5vw, 1rem);
-    font-size: clamp(1.5rem, 2vw, 2rem);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
   }
 
   p {
     font-weight: 300;
-    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-size: 0.9rem;
     max-width: 550px;
     width: 100%;
     line-height: 1.7;
@@ -114,6 +114,14 @@ const Wrapper = styled.section`
     .submit-btn {
       font-size: 1rem;
       padding: 0.6rem 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1rem;
     }
   }
 

@@ -52,9 +52,9 @@ const Wrapper = styled.div`
     /* .container {
       justify-content: center;
     } */
-    .logo-company {
+    /* .logo-company {
       margin: 0 1rem;
-    }
+    } */
   }
 `
 

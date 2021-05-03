@@ -36,19 +36,16 @@ const Wrapper = styled.section`
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1rem;
 
     .btn {
       padding: 0.5rem 1rem;
       text-transform: capitalize;
       font-weight: 300;
       letter-spacing: var(--spacing);
-      font-size: clamp(0.8rem, 5vw 1rem);
-      /* font-size: 0.7rem; */
+      font-size: 0.8rem;
       border-color: transparent;
-      /* width: 100%; */
       cursor: pointer;
+      margin-top: 1rem;
     }
 
     .clear {
@@ -66,6 +63,7 @@ const Wrapper = styled.section`
       text-align: center;
       .btn {
         width: 100%;
+        font-size: 1rem;
       }
     }
   }

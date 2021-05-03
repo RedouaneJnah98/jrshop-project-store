@@ -30,8 +30,14 @@ const Wrapper = styled.section`
   }
 
   h1 {
-    font-size: clamp(2.2rem, 5vw, 3rem);
+    font-size: 2.2rem;
     font-weight: 600;
+  }
+
+  @media (min-width: 576px) {
+    h1 {
+      font-size: 3rem;
+    }
   }
 
   @media (min-width: 768px) {

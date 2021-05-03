@@ -31,12 +31,12 @@ const Wrapper = styled.section`
   h5 {
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: clamp(0.65rem, 2vw, 0.85rem);
+    font-size: 0.65rem;
     line-height: 1;
   }
 
   h1 {
-    font-size: clamp(2.5rem, 5vw, 3.75rem);
+    font-size: 2.5rem;
     text-transform: uppercase;
     letter-spacing: var(--spacing);
     line-height: 1.1;
@@ -46,12 +46,24 @@ const Wrapper = styled.section`
     line-height: 2;
     font-weight: 400;
     max-width: 45em;
-    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-size: 0.9rem;
     margin-top: 0.5rem;
   }
 
   .img-container {
     display: none;
+  }
+
+  @media (min-width: 576px) {
+    h5 {
+      font-size: 1rem;
+    }
+    h1 {
+      font-size: 3.75rem;
+    }
+    p {
+      font-size: 1rem;
+    }
   }
 
   @media (min-width: 992px) {

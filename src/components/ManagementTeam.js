@@ -22,9 +22,19 @@ const Wrapper = styled.section`
   margin-top: 4rem;
 
   h1 {
-    font-size: clamp(2.2rem, 5vw, 3rem);
+    font-size: 2.2rem;
     font-weight: 600;
     text-transform: capitalize;
+  }
+
+  @media (max-width: 576px) {
+    padding-bottom: 4rem;
+  }
+
+  @media (min-width: 576px) {
+    h1 {
+      font-size: 3rem;
+    }
   }
 
   @media (min-width: 768px) {

@@ -187,7 +187,8 @@ export const Button = styled.button`
   text-transform: uppercase;
   font-weight: 600;
   font-size: clamp(0.85rem, 2vw, 1rem);
-  margin-top: clamp(1.5rem, 5vw, 2.5rem);
+  margin-top: 1.5rem;
+  /* margin-top: clamp(1.5rem, 5vw, 2.5rem); */
   width: 155px;
   height: 45px;
   /* width: clamp(155px, 20vw, 180px);
@@ -200,6 +201,12 @@ export const Button = styled.button`
     color: var(--white-clr);
     transition: 0.3s all linear;
     border: 1px solid var(--white-clr);
+  }
+
+  @media (min-wdith: 768px) {
+    width: 180px;
+    heigh: 55px;
+    margin-top: 2.5rem;
   }
 `
 

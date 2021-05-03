@@ -35,8 +35,10 @@ const Services = () => {
 }
 
 const Wrapper = styled.section`
-  padding-top: clamp(2.5rem, 5vw, 4rem);
-  padding-bottom: clamp(2rem, 5vw, 4rem);
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+  /* padding-top: clamp(2.5rem, 5vw, 4rem); */
+  /* padding-bottom: clamp(2rem, 5vw, 4rem); */
   background: #f2f8ff;
 
   .header {
@@ -92,10 +94,17 @@ const Wrapper = styled.section`
 
   @media (max-width: 768px) {
     .header {
+      h2 {
+        width: 100%;
+      }
       p {
         margin-top: 1rem;
       }
     }
+  }
+
+  @media (min-width: 768px) {
+    paddiing: 4rem 0;
   }
 `
 
